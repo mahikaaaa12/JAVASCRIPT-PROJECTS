@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON and OFF</title>
+    <style>
+        body {
+            background-color:black; /* Black color */
+        }
+
+        #bulb{
+            width: 300px;
+            height: 300px;
+            background-color: white; /* Default bulb color (OFF) */
+            border-radius: 50%; /* Makes it a circle */
+            display: block; /* Ensures the bulb is visible */
+            margin-bottom: 20px; /* Space between bulb and buttons */
+            align-items: center; /* Center the text inside the bulb */
+            justify-content: center; /* Center the text inside the bulb */
+            text-align: center; /* Center the text inside the bulb */
+            position: relative; /* Positioning for the text */
+        }
+
+        #text1, #text2{
+            padding-top: 30%; /* Padding for the text inside the bulb */
+        }
+
+        .button {
+            align-items: center; /* Center the button text */
+        }
+    </style>
+</head>
+<body>
+    <div id="bulb">
+        <h1 id="text1"></h1>
+        <h1 id="text2"></h1>
+        <br>
+        <br>
+    </div>
+    <button onclick="SwitchOn()" class="button">Switch ON</button>
+    <button onclick="SwitchOff()">Switch OFF</button>
+    <script>
+        function SwitchOn() {
+            document.getElementById("bulb").style.backgroundColor = "yellow"; // Yellow color for ON state
+            document.getElementById("bulb").style.boxShadow = "0 0 20px yellow"; // Glow effect
+            document.getElementById("text1").innerHTML = "Bulb is ON"; // Text for ON state
+        }
+        function SwitchOff() {
+            document.getElementById("bulb").style.backgroundColor = "white"; // White color for OFF state
+            document.getElementById("bulb").style.boxShadow = "none"; // Remove glow effect
+            document.getElementById("text1").innerHTML = "Bulb is OFF"; // Text for OFF state
+        }
+    </script>
+</body>
+</html>
